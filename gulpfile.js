@@ -8,13 +8,18 @@ var ejs = require("gulp-ejs");
 var uglify = require('gulp-uglify');
 var ext_replace = require('gulp-ext-replace');
 var cssmin = require('gulp-cssmin');
+var notify = require('gulp-notify');
+var cache = require('gulp-cache');
+var filter = require('gulp-filter');
+var browserSync = require('browser-sync').create();
+var reload = browserSync.reload;
 
 var pkg = require("./package.json");
 
 var banner = 
 "/** \n\
-* jQuery WeUI V" + pkg.version + " \n\
-* By 言川\n\
+* my-workflow" + pkg.version + " \n\
+* By bhz\n\
 * http://lihongxun945.github.io/jquery-weui/\n \
 */\n";
 
